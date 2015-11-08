@@ -1,4 +1,16 @@
 <!-- This form is incomplete--it needs a destination URL as well as a method: -->
-<form method="post">
+
+<form method="/new" method="post">
+  <input type="submit" value="New Game"/>
+</form>
+
+
+<!-- Call the HangpersonGame class method get_random_word //
+     Create a new instance of HangpersonGame using that word //
+     Redirect the browser to the show action -->
+
+<%= @game = HangpersonGame.new(HangpersonGame.get_random_word) %>
+
+<form method="/show" method="post">
   <input type="submit" value="New Game"/>
 </form>
